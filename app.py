@@ -4,19 +4,16 @@ app = Flask(__name__)
 def hello_world():
   return "Olá, mundo! Esse é meu site. (Julianna Granjeia)"
 
-menu="""
-<a href="/">Página inicial</a> | <a href="/sobre">Sobre</a> ! <a href="/contato">Contato</a>
-<br>
-"""
+menu = """<p style="text-align: center; "><div style="background-color: black; border-radius: 5px; display: inline-block; padding: 10px;"><a href="/"><span style="color: rgb(255, 0, 0); font-family: &quot;Arial Black&quot;; font-size: 24px;">Página inicial</span></a> | <a href="/sobre"><span style="color: rgb(255, 0, 0); font-family: &quot;Arial Black&quot;; font-size: 24px;">Sobre</span></a> | <a href="/contato"><span style="color: rgb(255, 0, 0); font-family: &quot;Arial Black&quot;; font-size: 24px;">Contato</span></a></p></div><br>"""
 
 @app.route("/")
-def hello_world():
-  return menu+"Olá, mundo! Esse é o meu site. (Julianna Granjeia)"
+def index():
+  return menu + "Olá, mundo! Esse é meu site. (Julianna Granjeia)"
 
 @app.route("/sobre")
 def sobre():
-  return menu+"Aqui vai o conteúdo da página Sobre"
+  return menu + "Um site de teste da pós-graduação. Olha lá!"
 
 @app.route("/contato")
 def contato():
-  return menu+"Aqui vai o conteúdo da página Contato"
+  return menu + "email@email.com"
